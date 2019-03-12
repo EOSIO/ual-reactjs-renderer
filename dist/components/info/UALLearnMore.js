@@ -50,10 +50,10 @@ function (_Component) {
   _inherits(UALLearnMore, _Component);
 
   /**
-     * @memberof UALLearnMore
-     * @name state
-     * @prop {boolean} [false] open - state of learn more text
-     */
+   * @memberof UALLearnMore
+   * @name state
+   * @prop {boolean} [false] open - state of learn more text accordion
+   */
   function UALLearnMore(props) {
     var _this;
 

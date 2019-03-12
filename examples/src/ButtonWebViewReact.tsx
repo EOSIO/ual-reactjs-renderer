@@ -1,6 +1,6 @@
 import { Ledger } from '@blockone/ual-ledger'
 import { Scatter } from '@blockone/ual-scatter'
-import { UALProvider, withUAL } from '@blockone/universal-authenticator-library-react-js-renderer'
+import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
 
 import { JsonRpc } from 'eosjs'
 import * as React from 'react'

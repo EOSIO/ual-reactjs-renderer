@@ -516,10 +516,9 @@ function (_Component) {
         style: _provider2.modalStyles
       }, _react.default.createElement(_UALBox.UALBox, null));
 
-      console.log('worker exists => ', !!Worker);
       return _react.default.createElement(_UALContext.UALContext.Provider, {
         value: this.state
-      }, _react.default.createElement("style", null, _base.baseFont), _react.default.createElement("h1", null, (Worker || 0).prototype + ''), modal, this.props.children);
+      }, _react.default.createElement("style", null, _base.baseFont), modal, this.props.children);
     }
   }]);
 
