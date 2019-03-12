@@ -1146,21 +1146,10 @@
     eosjs "20.0.0-08d2a9b.0"
     uuid "^3.3.2"
 
-"@blockone/ual-scatter@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@blockone/ual-scatter/-/ual-scatter-0.0.22.tgz#b7b463626f10658a1055f92dfbe6e89ee70a03f5"
-  integrity sha512-C8KRAP3w6aQ4Ts9Ed0vLjVHQ1uY3c1w7X/B5RagejIH/7pxsaq7PGdk+EhFu7eEvs7KO8UxPazt+1/4C/wcucQ==
-  dependencies:
-    "@blockone/universal-authenticator-library" "^0.0.32"
-    eosjs "20.0.0-beta2"
-    eosjs-ecc "^4.0.4"
-    scatterjs-core "^2.5.0"
-    scatterjs-plugin-eosjs2 "^1.2.0"
-
-"@blockone/universal-authenticator-library-react-js-renderer@^0.0.37":
+"@blockone/ual-reactjs-renderer@^0.0.37":
   version "0.0.37"
-  resolved "https://registry.yarnpkg.com/@blockone/universal-authenticator-library-react-js-renderer/-/universal-authenticator-library-react-js-renderer-0.0.37.tgz#1be585ef4e4a21df523afa0928a4672af891e50c"
-  integrity sha512-W8VMpKNGnWnL2P2/HUEY0AvXzhkIT4ONrjtjn6NUIzTX1vQJiEjcmCSHfCItOFvV96FZ53DuSCAPdiE7T9+stg==
+  resolved "https://registry.yarnpkg.com/@blockone/ual-reactjs-renderer/-/ual-reactjs-renderer-0.0.37.tgz#cb136ed82e82b9d33ffc7270f0b173113f017b62"
+  integrity sha512-lk1k1FjBARPJJyAhkJhEhyCgKclrVxZsR2B/UqzhwuHcI7EEd72MYIXnZFEf1QJa40EHQtckE0YYXc4YbjrCJg==
   dependencies:
     "@blockone/universal-authenticator-library" "^0.0.33"
     i18next "^14.0.1"
@@ -1171,6 +1160,17 @@
     react-icons "^3.4.0"
     react-tooltip "^3.9.2"
     styled-components "^4.1.3"
+
+"@blockone/ual-scatter@^0.0.22":
+  version "0.0.22"
+  resolved "https://registry.yarnpkg.com/@blockone/ual-scatter/-/ual-scatter-0.0.22.tgz#b7b463626f10658a1055f92dfbe6e89ee70a03f5"
+  integrity sha512-C8KRAP3w6aQ4Ts9Ed0vLjVHQ1uY3c1w7X/B5RagejIH/7pxsaq7PGdk+EhFu7eEvs7KO8UxPazt+1/4C/wcucQ==
+  dependencies:
+    "@blockone/universal-authenticator-library" "^0.0.32"
+    eosjs "20.0.0-beta2"
+    eosjs-ecc "^4.0.4"
+    scatterjs-core "^2.5.0"
+    scatterjs-plugin-eosjs2 "^1.2.0"
 
 "@blockone/universal-authenticator-library@^0.0.32":
   version "0.0.32"
