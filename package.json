@@ -1,5 +1,5 @@
 {
-  "name": "@blockone/universal-authenticator-library-react-js-renderer",
+  "name": "@blockone/ual-reactjs-renderer",
   "version": "0.0.37",
   "main": "dist/index.js",
   "author": {

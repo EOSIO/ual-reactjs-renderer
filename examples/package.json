@@ -46,7 +46,7 @@
     "@babel/runtime": "^7.2.0",
     "@blockone/ual-ledger": "^0.0.2",
     "@blockone/ual-scatter": "^0.0.22",
-    "@blockone/universal-authenticator-library-react-js-renderer": "^0.0.37",
+    "@blockone/ual-reactjs-renderer": "^0.0.37",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
