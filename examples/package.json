@@ -3,9 +3,12 @@
   "version": "0.0.1",
   "main": "index.js",
   "author": {
-    "name": "Nasser Abouelazm",
+    "name": "block.one",
     "url": "https://block.one/"
   },
+  "collaborators": [
+    "Nasser Abouelazm"
+  ],
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.react.js",
@@ -43,7 +46,7 @@
     "@babel/runtime": "^7.2.0",
     "@blockone/ual-ledger": "^0.0.2",
     "@blockone/ual-scatter": "^0.0.22",
-    "@blockone/universal-authenticator-library-react": "^0.0.37",
+    "@blockone/universal-authenticator-library-react-js-renderer": "^0.0.37",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3"

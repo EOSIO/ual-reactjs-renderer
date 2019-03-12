@@ -1,6 +1,6 @@
-# UAL React Example Application
+# UAL ReactJS Example App
 
-This example demonstrates an implementation of the [Universal Authenticator Library React Renderer](https://github.com/EOSIO/universal-authenticator-library/tree/develop/packages/universal-authenticator-library-react) in a simple EOS transfer DAPP.  It uses the [UAL-Scatter](https://github.com/EOSIO/ual-scatter) and [UAL-Ledger](https://github.com/EOSIO/ual-ledger) authenticators.
+This example demonstrates an implementation of the [Universal Authenticator Library React Renderer](https://github.com/EOSIO/universal-authenticator-library) in a simple EOS transfer DAPP.  It uses the [UAL-Scatter](https://github.com/EOSIO/ual-scatter) and [UAL-Ledger](https://github.com/EOSIO/ual-ledger) authenticators.
 
 ## Setup
 ```

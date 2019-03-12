@@ -1157,10 +1157,10 @@
     scatterjs-core "^2.5.0"
     scatterjs-plugin-eosjs2 "^1.2.0"
 
-"@blockone/universal-authenticator-library-react@^0.0.37":
+"@blockone/universal-authenticator-library-react-js-renderer@^0.0.37":
   version "0.0.37"
-  resolved "https://registry.yarnpkg.com/@blockone/universal-authenticator-library-react/-/universal-authenticator-library-react-0.0.37.tgz#bab38e6e0ee52f357588827d2f20189155c9905c"
-  integrity sha512-EsduynVOGCc9vsZ7E24VySQpRx106vn33IZkdPbWo+zvLfKnU8AZ76Z3brgwdc0dL4g65aTiL2/PPZ6xbMSu3g==
+  resolved "https://registry.yarnpkg.com/@blockone/universal-authenticator-library-react-js-renderer/-/universal-authenticator-library-react-js-renderer-0.0.37.tgz#1be585ef4e4a21df523afa0928a4672af891e50c"
+  integrity sha512-W8VMpKNGnWnL2P2/HUEY0AvXzhkIT4ONrjtjn6NUIzTX1vQJiEjcmCSHfCItOFvV96FZ53DuSCAPdiE7T9+stg==
   dependencies:
     "@blockone/universal-authenticator-library" "^0.0.33"
     i18next "^14.0.1"

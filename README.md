@@ -1,11 +1,11 @@
-# Universal Authenticator Library - React
+# UAL ReactJS Renderer
 
-This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library/tree/develop/packages/universal-authenticator-library). 
+This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library). 
 
 ## Getting Started
 #### With ``yarn``
 ```bash
-yarn add @blockone/universal-authenticator-library-react
+yarn add @blockone/universal-authenticator-library-react-js-renderer
 ```
 Then, install the authenticators that you wish to use...
 ```bash
@@ -13,7 +13,7 @@ yarn add @blockone/ual-scatter @blockone/ual-lynx
 ```
 #### With ``npm``
 ```bash
-npm i @blockone/universal-authenticator-library-react
+npm i @blockone/universal-authenticator-library-react-js-renderer
 ```
 Then, install the authenticators that you wish to use...
 ```bash
@@ -24,7 +24,7 @@ npm i @blockone/ual-scatter @blockone/ual-lynx
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { UALProvider, withUAL } from '@blockone/universal-authenticator-library-react'
+import { UALProvider, withUAL } from '@blockone/universal-authenticator-library-react-js-renderer'
 import { Scatter } from '@blockone/ual-scatter'
 import { Lynx } from '@blockone/ual-lynx'
 
@@ -53,7 +53,7 @@ ReactDOM.render(
 ```
 
 ## Examples
-A small example is provided in the [examples](https://github.com/EOSIO/universal-authenticator-library/tree/develop/packages/universal-authenticator-library-react/examples) folder.
+A small example is provided in the [examples](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/tree/develop/examples) folder.
 
 ## Environment Set Up
 **A one-time environment setup is required prior to development.**  The following commands provides a quick starting point.  Make sure you are in the ``examples/`` directory.
@@ -70,10 +70,10 @@ RPC_HOST=api.example.net
 RPC_PORT=443
 ```
 These values can be edited according to the particulars of your project.  They will be used as the chain data in the example app.
-*See the [react example](https://github.com/EOSIO/universal-authenticator-library/tree/develop/packages/universal-authenticator-library-react/examples) for more details.*
+*See the [react example](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/tree/develop/) for more details.*
 
 ## Development
-After you set up your environment you can begin development.  Make sure you are back in the ``/`` directory of the ``universal-authenticator-library-react`` package.
+After you set up your environment you can begin development.  Make sure you are back in the ``/`` directory of the ``universal-authenticator-library-react-js-renderer`` package.
 ```bash
 yarn
 yarn link
@@ -83,7 +83,7 @@ yarn build -w
 In a duplicate terminal tab, enter the following commands:
 ```bash
 cd examples
-yarn link @blockone/universal-authenticator-library-react
+yarn link @blockone/universal-authenticator-library-react-js-renderer
 yarn
 yarn example
 ```
@@ -94,10 +94,10 @@ Open a browser at `localhost:4000` to see a running instance of the example.
 
 ## Contributing
 
-[Contributing Guide](https://github.com/EOSIO/universal-authenticator-library/blob/develop/packages/universal-authenticator-library-react/CONTRIBUTING.md)
+[Contributing Guide](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/blob/master/CONTRIBUTING.md)
 
-[Code of Conduct](https://github.com/EOSIO/universal-authenticator-library/blob/develop/packages/universal-authenticator-library-react/CONTRIBUTING.md#conduct)
+[Code of Conduct](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/blob/master/CONTRIBUTING.md#conduct)
 
 ## License
 
-[MIT](https://github.com/EOSIO/universal-authenticator-library/blob/develop/packages/universal-authenticator-library-react/LICENSE)
+[MIT](https://github.com/EOSIO/universal-authenticator-library-react-js-renderer/blob/master/LICENSE)
