@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "rootDir": "../../",
+    "outDir": "./dist",
+    "strict": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "jsx": "react",
+    "skipLibCheck": true
+  },
+  "lib": ["esnext"],
+  "include": [
+    "src/**/*.ts",
+    "examples/**/*"
+  ],
+  "exclude": [
+    "src/**/*.test.ts",
+    "public",
+    "node_modules"
+  ]
+}

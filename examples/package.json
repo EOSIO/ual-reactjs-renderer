@@ -1,0 +1,51 @@
+{
+  "name": "@blockone/universal-authenticator-library-react-example",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": {
+    "name": "Nasser Abouelazm",
+    "url": "https://block.one/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --config webpack.config.react.js",
+    "example": "webpack-dev-server --config webpack.config.react.js",
+    "lint": "eslint ../src/**/*.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "@babel/preset-react": "^7.0.0",
+    "@blockone/eslint-config-blockone": "^0.0.5",
+    "@types/react": "15.0.4",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "dotenv": "^6.2.0",
+    "eslint": "^5.10.0",
+    "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
+    "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
+    "js-sha256": "^0.9.0",
+    "nodemon": "^1.18.6",
+    "typescript": "^3.2.2",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.2.0",
+    "@blockone/ual-ledger": "^0.0.2",
+    "@blockone/ual-scatter": "^0.0.22",
+    "@blockone/universal-authenticator-library-react": "^0.0.37",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  }
+}
