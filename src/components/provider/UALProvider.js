@@ -291,7 +291,12 @@ export class UALProvider extends Component {
     const { authenticateWithoutAccountInput } = this.state
     if (autoLoginAuthenticator) {
       this.setState({ availableAuthenticators: [autoLoginAuthenticator] }, () => {
-        authenticateWithoutAccountInput(autoLoginAuthenticator, true)
+        const availableCheck = setInterval(() => {
+          if (!autoLoginAuthenticator.isLoading()) {
+            clearInterval(availableCheck)
+            authenticateWithoutAccountInput(autoLoginAuthenticator, true)
+          }
+        }, 250)
       })
     } else {
       this.setState({ availableAuthenticators }, () => {
