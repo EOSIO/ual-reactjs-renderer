@@ -90,7 +90,12 @@ function (_Component) {
         _this.setState({
           availableAuthenticators: [autoLoginAuthenticator]
         }, function () {
-          authenticateWithoutAccountInput(autoLoginAuthenticator, true);
+          var availableCheck = setInterval(function () {
+            if (!autoLoginAuthenticator.isLoading()) {
+              clearInterval(availableCheck);
+              authenticateWithoutAccountInput(autoLoginAuthenticator, true);
+            }
+          }, 250);
         });
       } else {
         _this.setState({

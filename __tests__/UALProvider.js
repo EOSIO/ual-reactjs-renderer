@@ -6,6 +6,8 @@ import { UALBox } from '../src/components/modal/UALBox'
 import { UALProvider } from '../src/index'
 import { DEFAULT_STATUS } from '../src/constants/provider'
 
+jest.useFakeTimers();
+
 describe('UALProvider', () => {
   describe('has a modal prop', () => {
     it('that renders a modal when it is true', () => {
@@ -68,11 +70,25 @@ describe('UALProvider', () => {
       expect(wrapper.state().availableAuthenticators.length).toBe(1)
     })
 
-    it('that automatically attempts authentication if autoLogin is available', () => {
+    it('that automatically attempts authentication if autoLogin is available and not loading', () => {
       const { authenticators } = wrapper.state()
       const spy = jest.spyOn(wrapper.state(), 'authenticateWithoutAccountInput')
       const autoLoginAuth = authenticators[0]
+      autoLoginAuth.isLoading = jest.fn().mockReturnValue(false)
       wrapper.instance().fetchAuthenticators(authenticators, autoLoginAuth)
+      jest.advanceTimersByTime(1000)
+      expect(spy).toHaveBeenCalled()
+    })
+
+    it('that delays authentication if autoLogin is available but still loading', () => {
+      const { authenticators } = wrapper.state()
+      const spy = jest.spyOn(wrapper.state(), 'authenticateWithoutAccountInput')
+      const autoLoginAuth = authenticators[0]
+      autoLoginAuth.isLoading = jest.fn().mockReturnValue(true)
+      wrapper.instance().fetchAuthenticators(authenticators, autoLoginAuth)
+      expect(spy).not.toHaveBeenCalled()
+      autoLoginAuth.isLoading = jest.fn().mockReturnValue(false)
+      jest.advanceTimersByTime(1000)
       expect(spy).toHaveBeenCalled()
     })
   })
