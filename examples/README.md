@@ -1,4 +1,4 @@
-# Basic Example App for UAL with ReactJS
+# Basic Example App for UAL with ReactJS ![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
 
 This example demonstrates an implementation of the [Universal Authenticator Library Renderer for ReactJS](https://github.com/EOSIO/universal-authenticator-library) in a simple EOS transfer DAPP.  It uses the [UAL for Scatter Authenticator](https://github.com/EOSIO/ual-scatter) and [UAL for Ledger Authenticator](https://github.com/EOSIO/ual-ledger) authenticators.
 
