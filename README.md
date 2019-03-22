@@ -1,4 +1,4 @@
-# UAL ReactJS Renderer
+# UAL Renderer for ReactJS
 
 This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library). 
 
