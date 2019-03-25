@@ -16,6 +16,8 @@ import { baseFont } from '../../styles/base'
  * Wrapper component that provides a child app with access to UAL functionality
  */
 export class UALProvider extends Component {
+  static displayName = 'UALProvider'
+
   constructor(props) {
     super(props)
     /**
@@ -25,7 +27,7 @@ export class UALProvider extends Component {
       /**
        * @memberof UAL
        * @desc chain list from props
-       * @type {Chain[]} chains 
+       * @type {Chain[]} chains
        */
       chains: props.chains,
       /**
@@ -67,7 +69,7 @@ export class UALProvider extends Component {
       /**
        * @memberof UAL
        * @desc authenticator currently used
-       * @type {Authenticator} activeAuthenticator 
+       * @type {Authenticator} activeAuthenticator
        */
       activeAuthenticator: null,
       /**

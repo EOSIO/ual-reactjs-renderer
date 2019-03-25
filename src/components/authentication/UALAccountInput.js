@@ -19,6 +19,8 @@ export const StyledInput = styled.input`
  * Component for the account name input field.
  */
 export class UALAccountInput extends Component {
+  static displayName = 'UALAccountInput'
+
   constructor(props) {
     super(props)
     /**

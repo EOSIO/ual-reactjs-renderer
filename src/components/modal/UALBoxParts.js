@@ -17,9 +17,11 @@ import { secondaryInstructionsText, secondaryInstructionsLight } from '../../sty
 /**
  * @class
  * @name UALBoxParts
- * @desc class for rendering sections of the UALBox Component 
+ * @desc class for rendering sections of the UALBox Component
  */
 export class UALBoxParts {
+  static displayName = 'UALBoxParts'
+
   /**
    * returns an instance of UALAuthButton
    * @memberof UALBoxParts

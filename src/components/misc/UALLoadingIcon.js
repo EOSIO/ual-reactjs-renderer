@@ -24,6 +24,8 @@ export const UALLoadingIcon = ({ withContainer }) => (
   </div>
 )
 
+UALLoadingIcon.displayName = 'UALLoadingIcon'
+
 UALLoadingIcon.defaultProps = {
   withContainer: false,
 }

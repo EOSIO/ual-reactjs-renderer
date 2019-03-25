@@ -15,6 +15,8 @@ import {
  * Component for rendering the "Learn More" text.
  */
 export class UALLearnMore extends Component {
+  static displayName = 'UALLearnMore'
+
   /**
    * @memberof UALLearnMore
    * @name state

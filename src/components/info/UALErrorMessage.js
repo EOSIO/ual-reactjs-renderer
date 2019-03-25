@@ -22,6 +22,8 @@ export const UALErrorMessage = ({ error: { message } }) => (
   </div>
 )
 
+UALErrorMessage.displayName = 'UALErrorMessage'
+
 /**
  * @memberof UALErrorMessage
  * @name props

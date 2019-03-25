@@ -18,6 +18,8 @@ import { boxTitles, installGuide, defaultBoxState } from '../../constants/box'
  * basic preparatory authentication logic
  */
 class UALBoxBase extends Component {
+  static displayName = 'UALBoxBase'
+
   constructor(props) {
     super(props)
     this.state = defaultBoxState
