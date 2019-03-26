@@ -94,13 +94,13 @@ Open a browser at `localhost:4000` to see a running instance of the example.
 
 ## Contributing
 
-[Contributing Guide](https://github.com/EOSIO/ual-reactjs-renderer/blob/master/CONTRIBUTING.md)
+[Contributing Guide](./CONTRIBUTING.md)
 
-[Code of Conduct](https://github.com/EOSIO/ual-reactjs-renderer/blob/master/CONTRIBUTING.md#conduct)
+[Code of Conduct](./CONTRIBUTING.md#conduct)
 
 ## License
 
-[MIT](https://github.com/EOSIO/ual-reactjs-renderer/blob/master/LICENSE)
+[MIT](./LICENSE)
 
 ## Important
 
