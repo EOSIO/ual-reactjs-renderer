@@ -169,6 +169,8 @@ class TransactionApp extends React.Component<TransactionProps, TransactionState>
 
 const TestAppConsumer = withUAL(TransactionApp)
 
+TestAppConsumer.displayName = 'TestAppConsumer'
+
 const appName = 'My App'
 const ledger = new Ledger([exampleNet])
 const scatter = new Scatter([exampleNet], { appName })
