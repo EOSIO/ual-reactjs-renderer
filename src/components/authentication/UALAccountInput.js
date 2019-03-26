@@ -96,6 +96,7 @@ export class UALAccountInput extends Component {
     const { accountInput, hoverStyle } = this.state
     const { submitAccountForLogin, authenticator } = this.props
     const buttonStyle = accountInput !== '' ? buttonEnabled : buttonDisabled
+    const background = authenticator.getStyle().background
     return (
       <div style={inputWrapper}>
         <StyledInput
@@ -113,7 +114,7 @@ export class UALAccountInput extends Component {
           role='button'
           aria-label='Continue'
           tabIndex='-1'
-          style={{ ...buttonStyle, ...hoverStyle }}
+          style={{ ...buttonStyle, background, ...hoverStyle }}
           onMouseEnter={this.activateHoverSize}
           onMouseLeave={this.activateGenericSize}
           onClick={() => accountInput && submitAccountForLogin(accountInput, authenticator)}

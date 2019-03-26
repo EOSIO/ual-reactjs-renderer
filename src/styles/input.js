@@ -25,10 +25,10 @@ export const inputStyle = {
 
 export const buttonDisabled = {
   ...authButton,
-  backgroundColor: 'rgba(0, 0, 0, 0.1)',
+  opacity: '0.5',
 }
 
 export const buttonEnabled = {
   ...authButton,
-  backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  opacity: '1',
 }
