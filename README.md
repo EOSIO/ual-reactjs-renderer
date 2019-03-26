@@ -1,6 +1,12 @@
-# UAL Renderer for ReactJS ![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
+# UAL Renderer for ReactJS
 
 This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
+
+![EOSIO Labs](https://img.shields.io/badge/EOSIO-Labs-5cb3ff.svg)
+
+# About EOSIO Labs
+
+EOSIO Labs repositories are experimental.  Developers in the community are encouraged to use EOSIO Labs repositories as the basis for code and concepts to incorporate into their applications. Community members are also welcome to contribute and further develop these repositories. Since these repositories are not supported by Block.one, we may not provide responses to issue reports, pull requests, updates to functionality, or other requests from the community, and we encourage the community to take responsibility for these.
 
 ## Getting Started
 #### With ``yarn``
