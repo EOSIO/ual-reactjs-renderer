@@ -21,7 +21,7 @@
     "docs": "jsdoc src -r -d docs"
   },
   "dependencies": {
-    "@blockone/universal-authenticator-library": "^0.0.33",
+    "universal-authenticator-library": "0.0.35",
     "i18next": "^14.0.1",
     "i18next-browser-languagedetector": "^2.2.4",
     "prop-types": "^15.7.1",
