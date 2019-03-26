@@ -59,6 +59,8 @@ const defaultState = {
 }
 
 class TransactionApp extends React.Component<TransactionProps, TransactionState> {
+  static displayName = 'TransactionApp'
+
   constructor(props: TransactionProps) {
     super(props)
     this.state = {

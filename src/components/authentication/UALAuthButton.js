@@ -24,6 +24,8 @@ import { buttonState, errorColors } from '../../constants/authentication'
  * Component that provides a button for logging in with a given Authenticator.
  */
 export class UALAuthButton extends Component {
+  static displayName = 'UALAuthButton'
+
   constructor(props) {
     super(props)
     let button = buttonState.UNAVAILABLE

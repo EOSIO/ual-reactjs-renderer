@@ -27,6 +27,8 @@ export const UALContainer = ({ enter, exit, transitionForward, children }) => {
   )
 }
 
+UALContainer.displayName = 'UALContainer'
+
 /**
  * @memberof UALContainer
  * @name props

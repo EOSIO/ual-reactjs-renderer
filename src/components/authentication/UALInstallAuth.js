@@ -11,6 +11,8 @@ import { buttonHover } from '../../styles/authenticator'
  * Component for rendering the authenticator install screen
  */
 export class UALInstallAuth extends Component {
+  static displayName = 'UALInstallAuth'
+
   constructor(props) {
     super(props)
     /**

@@ -9,6 +9,8 @@ import { exitWrapper, exit, exitHover } from '../../styles/buttons/exit'
  * Component for rendering a modal close button.
  */
 export class UALExitButton extends Component {
+  static displayName = 'UALExitButton'
+
   constructor(props) {
     super(props)
     /**
