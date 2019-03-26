@@ -1,6 +1,6 @@
 {
-  "name": "@blockone/ual-reactjs-renderer",
-  "version": "0.0.38",
+  "name": "ual-reactjs-renderer",
+  "version": "0.0.39",
   "main": "dist/index.js",
   "author": {
     "name": "block.one",
