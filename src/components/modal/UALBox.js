@@ -214,6 +214,8 @@ class UALBoxBase extends Component {
 
 export const UALBox = withUAL(UALBoxBase)
 
+UALBox.displayName = 'UALBox'
+
 /**
  * @typeDef ual
  * @desc the ual context that UALBox consumes
