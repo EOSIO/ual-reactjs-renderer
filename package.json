@@ -1,6 +1,6 @@
 {
-  "name": "@blockone/ual-reactjs-renderer",
-  "version": "0.0.38",
+  "name": "ual-reactjs-renderer",
+  "version": "0.1.0",
   "main": "dist/index.js",
   "author": {
     "name": "block.one",
@@ -21,7 +21,7 @@
     "docs": "jsdoc src -r -d docs"
   },
   "dependencies": {
-    "@blockone/universal-authenticator-library": "^0.0.33",
+    "@blockone/universal-authenticator-library": "0.0.34",
     "i18next": "^14.0.1",
     "i18next-browser-languagedetector": "^2.2.4",
     "prop-types": "^15.7.1",

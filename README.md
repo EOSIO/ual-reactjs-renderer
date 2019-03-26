@@ -1,32 +1,32 @@
 # UAL Renderer for ReactJS ![EOSIO Alpha](https://img.shields.io/badge/EOSIO-Alpha-blue.svg)
 
-This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library). 
+This library provides a React renderer around the [Universal Authenticator Library](https://github.com/EOSIO/universal-authenticator-library).
 
 ## Getting Started
 #### With ``yarn``
 ```bash
-yarn add @blockone/ual-reactjs-renderer
+yarn add ual-reactjs-renderer
 ```
 Then, install the authenticators that you wish to use...
 ```bash
-yarn add @blockone/ual-scatter @blockone/ual-lynx
+yarn add ual-scatter ual-lynx
 ```
 #### With ``npm``
 ```bash
-npm i @blockone/ual-reactjs-renderer
+npm i ual-reactjs-renderer
 ```
 Then, install the authenticators that you wish to use...
 ```bash
-npm i @blockone/ual-scatter @blockone/ual-lynx
+npm i ual-scatter ual-lynx
 ```
 
 ## Basic Usage
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
-import { Scatter } from '@blockone/ual-scatter'
-import { Lynx } from '@blockone/ual-lynx'
+import { UALProvider, withUAL } from 'ual-reactjs-renderer'
+import { Scatter } from 'ual-scatter'
+import { Lynx } from 'ual-lynx'
 
 import { MyApp } from './MyApp'
 
@@ -83,7 +83,7 @@ yarn build -w
 In a duplicate terminal tab, enter the following commands:
 ```bash
 cd examples
-yarn link @blockone/ual-reactjs-renderer
+yarn link ual-reactjs-renderer
 yarn
 yarn example
 ```
