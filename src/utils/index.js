@@ -1,3 +1,8 @@
+/*
+ * Code inspired by Chris Coyier's vanilla css lighten/darken color solution
+ * https://css-tricks.com/snippets/javascript/lighten-darken-color/
+ */
+
 const hexToRGB = (color) => {
   const num = parseInt(color.replace('#', ''), 16)
   const r = (num >> 16) - 30 // eslint-disable-line
