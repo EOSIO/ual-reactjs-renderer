@@ -13,6 +13,7 @@ import { title, titleSecondary } from '../../styles/title'
 import { backButton, backButtonWrapper, backButtonText } from '../../styles/buttons/back'
 import { retryButton } from '../../styles/buttons/retry'
 import { secondaryInstructionsText, secondaryInstructionsLight } from '../../styles/instructions'
+import { darkenColor } from '../../utils'
 
 /**
  * @class
@@ -222,7 +223,7 @@ export class UALBoxParts {
     }
     if (showAccountInput || loading || showInstallScreen || error) {
       background = {
-        backgroundColor: authenticatorStyle
+        backgroundColor: darkenColor(authenticatorStyle)
       }
     }
     return background
