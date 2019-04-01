@@ -4,7 +4,7 @@ module.exports = {
   coverageDirectory: 'coverage',
   moduleFileExtensions: ['js', 'json', 'jsx'],
   moduleNameMapper: {
-    '@blockone/ual-scatter': '<rootDir>/__mocks__/Scatter.js',
+    'ual-scatter': '<rootDir>/__mocks__/Scatter.js',
     'providerProps': '<rootDir>/__mocks__/providerProps.js',
     'localStorageMock': '<rootDir>/__mocks__/localStorageMock.js',
     'UALAccountInputProps': '<rootDir>/__mocks__/UALAccountInputProps.js',

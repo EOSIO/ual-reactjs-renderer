@@ -1,6 +1,6 @@
-import { Ledger } from '@blockone/ual-ledger'
-import { Scatter } from '@blockone/ual-scatter'
-import { UALProvider, withUAL } from '@blockone/ual-reactjs-renderer'
+import { Lynx } from 'ual-lynx'
+import { Scatter } from 'ual-scatter'
+import { UALProvider, withUAL } from 'ual-reactjs-renderer'
 
 import { JsonRpc } from 'eosjs'
 import * as React from 'react'
@@ -172,11 +172,11 @@ const TestAppConsumer = withUAL(TransactionApp)
 TestAppConsumer.displayName = 'TestAppConsumer'
 
 const appName = 'My App'
-const ledger = new Ledger([exampleNet])
+const lynx = new Lynx([exampleNet])
 const scatter = new Scatter([exampleNet], { appName })
 
 ReactDOM.render(
-  <UALProvider chains={[exampleNet]} authenticators={[scatter, ledger]} appName={'My App'}>
+  <UALProvider chains={[exampleNet]} authenticators={[scatter, lynx]} appName={'My App'}>
     <TestAppConsumer />
   </UALProvider>,
   document.getElementById('ual-app') as HTMLElement,

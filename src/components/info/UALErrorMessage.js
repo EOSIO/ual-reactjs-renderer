@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { UALError } from '@blockone/universal-authenticator-library'
+import { UALError } from 'universal-authenticator-library'
 
 import { IoMdInformationCircleOutline } from 'react-icons/io'
 

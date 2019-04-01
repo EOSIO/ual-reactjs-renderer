@@ -1,4 +1,4 @@
-import { Scatter } from '@blockone/ual-scatter'
+import { Scatter } from 'ual-scatter'
 
 const EXAMPLE_ENV = {
   CHAIN_ID: '1',
