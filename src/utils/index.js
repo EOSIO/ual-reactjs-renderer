@@ -19,6 +19,9 @@ const limitValues = (value) => {
 
 export const darkenColor = (color) => {
   let colors
+  if (!color) {
+    return '#1A3270'
+  }
   if (color.indexOf('rgb') !== -1) {
     colors = color.replace('rgb(', '')
       .replace(')', '')

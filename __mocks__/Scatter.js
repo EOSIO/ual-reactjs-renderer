@@ -89,6 +89,10 @@ export class Scatter {
     return false
   }
 
+  requiresGetKeyConfirmation() {
+    return false
+  }
+
   async login() {
     try {
       for (const chain of this.chains) {

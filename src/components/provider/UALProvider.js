@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '../../i18n'
 import '../../types'
-import { UAL, UALError, UALErrorType } from '@blockone/universal-authenticator-library'
+import { UAL, UALError, UALErrorType } from 'universal-authenticator-library'
 
 import { UALContext } from './UALContext'
 import { DEFAULT_STATUS } from '../../constants/provider'

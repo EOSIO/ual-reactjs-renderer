@@ -1,5 +1,7 @@
 const baseProps = {
-  authenticator: {},
+  authenticator: {
+  	getStyle: jest.fn().mockReturnValue('rgb(100,100,100)')
+  },
   submitAccountForLogin: jest.fn(),
 }
 

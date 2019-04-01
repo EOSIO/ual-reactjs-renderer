@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import { providerProps } from 'providerProps'
-import { UALError, UALErrorType } from '@blockone/universal-authenticator-library'
+import { UALError, UALErrorType } from 'universal-authenticator-library'
 import { UALBox } from '../src/components/modal/UALBox'
 import { UALProvider } from '../src/index'
 import { UALErrorMessage } from '../src/components/info/UALErrorMessage'
