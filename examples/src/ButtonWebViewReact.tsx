@@ -1,3 +1,4 @@
+import { Ledger } from 'ual-ledger'
 import { Lynx } from 'ual-lynx'
 import { Scatter } from 'ual-scatter'
 import { UALProvider, withUAL } from 'ual-reactjs-renderer'
@@ -173,10 +174,11 @@ TestAppConsumer.displayName = 'TestAppConsumer'
 
 const appName = 'My App'
 const lynx = new Lynx([exampleNet])
+const ledger = new Ledger([exampleNet])
 const scatter = new Scatter([exampleNet], { appName })
 
 ReactDOM.render(
-  <UALProvider chains={[exampleNet]} authenticators={[scatter, lynx]} appName={'My App'}>
+  <UALProvider chains={[exampleNet]} authenticators={[ledger, lynx, scatter]} appName={'My App'}>
     <TestAppConsumer />
   </UALProvider>,
   document.getElementById('ual-app') as HTMLElement,

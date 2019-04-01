@@ -42,7 +42,7 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 4000,
+    port: 3000,
     contentBase: path.join(__dirname, 'build')
   },
   plugins: [
