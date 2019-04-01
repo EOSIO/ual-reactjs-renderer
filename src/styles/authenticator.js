@@ -41,13 +41,10 @@ export const authText = {
   display: 'inline-block',
   padding: '12px 13px 12px 15px',
   width: 'calc(100% - 50px)',
-  fontSize: '1.25rem',
-  fontWeight: 'bold',
-  letterSpacing: '1.1px',
 }
 
 export const authTextFont = {
-  fontSize: '1.25rem',
+  fontSize: '20px',
   fontWeight: 'bold',
   letterSpacing: '1.1px',
 }

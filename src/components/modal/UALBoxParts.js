@@ -13,13 +13,16 @@ import { title, titleSecondary } from '../../styles/title'
 import { backButton, backButtonWrapper, backButtonText } from '../../styles/buttons/back'
 import { retryButton } from '../../styles/buttons/retry'
 import { secondaryInstructionsText, secondaryInstructionsLight } from '../../styles/instructions'
+import { darkenColor } from '../../utils'
 
 /**
  * @class
  * @name UALBoxParts
- * @desc class for rendering sections of the UALBox Component 
+ * @desc class for rendering sections of the UALBox Component
  */
 export class UALBoxParts {
+  static displayName = 'UALBoxParts'
+
   /**
    * returns an instance of UALAuthButton
    * @memberof UALBoxParts
@@ -220,7 +223,7 @@ export class UALBoxParts {
     }
     if (showAccountInput || loading || showInstallScreen || error) {
       background = {
-        backgroundColor: authenticatorStyle
+        backgroundColor: darkenColor(authenticatorStyle)
       }
     }
     return background

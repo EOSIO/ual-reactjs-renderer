@@ -647,11 +647,6 @@
     tslint "^5.11.0"
     tslint-eslint-rules "^5.4.0"
 
-"@blockone/universal-authenticator-library@^0.0.33":
-  version "0.0.33"
-  resolved "https://registry.yarnpkg.com/@blockone/universal-authenticator-library/-/universal-authenticator-library-0.0.33.tgz#759f9b81bdbb81066df12ea8f9279bf87a459127"
-  integrity sha512-GRrSo83o7ko0xDKoUvL1nL3V3u2QNrBLIlrUF/gWaBn/81GPjA8etcq+ok+jn6/4vGlum5nJtuV5MyIRUqQg9g==
-
 "@emotion/is-prop-valid@^0.7.3":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.7.3.tgz#a6bf4fa5387cbba59d44e698a4680f481a8da6cc"
@@ -5351,6 +5346,11 @@ union-value@^1.0.0:
     get-value "^2.0.6"
     is-extendable "^0.1.1"
     set-value "^0.4.3"
+
+universal-authenticator-library@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/universal-authenticator-library/-/universal-authenticator-library-0.1.0.tgz#187e6a85f43e75d4d76b66c228c9e4b59770d4af"
+  integrity sha512-45nl80BWf+9WA8vTMXunMicZmHPm4wWdxNnSlL65cCP4OjA1ra4IuH+T7+Ko3P6IfXSfS9+VNCuXai3fip+taA==
 
 unset-value@^1.0.0:
   version "1.0.0"

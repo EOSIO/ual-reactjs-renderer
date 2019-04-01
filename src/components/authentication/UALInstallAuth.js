@@ -11,6 +11,8 @@ import { buttonHover } from '../../styles/authenticator'
  * Component for rendering the authenticator install screen
  */
 export class UALInstallAuth extends Component {
+  static displayName = 'UALInstallAuth'
+
   constructor(props) {
     super(props)
     /**
@@ -42,13 +44,14 @@ export class UALInstallAuth extends Component {
   render() {
     const { hoverStyle } = this.state
     const { authenticator } = this.props
+    const background = authenticator.getStyle().background
     return (
       <div style={installButtonWrapper}>
         <div
           role='button'
-          aria-label='Continue'
+          aria-label='Leave and Install'
           tabIndex='-1'
-          style={{ ...installButton, ...hoverStyle }}
+          style={{ ...installButton, background, ...hoverStyle }}
           onMouseEnter={this.activateHoverSize}
           onMouseLeave={this.activateGenericSize}
         >
