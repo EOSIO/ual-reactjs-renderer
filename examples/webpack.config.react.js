@@ -1,17 +1,18 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const dotenv = require('dotenv').config()
+
+require('dotenv').config()
 
 module.exports = {
-  mode: "development",
+  mode: 'development',
   entry: [
-    "babel-polyfill",
-    path.join(__dirname, "src/ButtonWebViewReact.tsx"),
+    'babel-polyfill',
+    path.join(__dirname, 'src/ButtonWebViewReact.tsx'),
   ],
   output: {
     path: path.join(__dirname, 'build'),
-    filename: "main_bundle.js",
+    filename: 'main_bundle.js',
   },
   module: {
     rules: [
@@ -22,42 +23,41 @@ module.exports = {
         options: {
           transpileOnly: true,
           babelrc: true,
-        }
+        },
       },
-     {
+      {
         test: /\.(js)$/,
         exclude: /node_modules/,
         include: [
           '/node_modules/@blockone/universal-authenticator-library',
-          path.join(__dirname, '../')
+          path.join(__dirname, '../'),
         ],
-        loader: "babel-loader",
+        loader: 'babel-loader',
         query: {
           presets: ['@babel/preset-env', '@babel/preset-react'],
           plugins: ['@babel/plugin-proposal-class-properties'],
-        }
+        },
 
       },
-      
-    ]
+    ],
   },
   devServer: {
     port: 4000,
-    contentBase: path.join(__dirname, 'build')
+    contentBase: path.join(__dirname, 'build'),
   },
   plugins: [
     new webpack.DefinePlugin({
-      'EXAMPLE_ENV': {
-        'CHAIN_ID': JSON.stringify(process.env.CHAIN_ID),
-        'RPC_PROTOCOL': JSON.stringify(process.env.RPC_PROTOCOL),
-        'RPC_HOST': JSON.stringify(process.env.RPC_HOST),
-        'RPC_PORT': JSON.stringify(process.env.RPC_PORT)
-      }
+      EXAMPLE_ENV: {
+        CHAIN_ID: JSON.stringify(process.env.CHAIN_ID),
+        RPC_PROTOCOL: JSON.stringify(process.env.RPC_PROTOCOL),
+        RPC_HOST: JSON.stringify(process.env.RPC_HOST),
+        RPC_PORT: JSON.stringify(process.env.RPC_PORT),
+      },
     }),
     new HtmlWebpackPlugin({
-      template: "./server/template.html",
+      template: './server/template.html',
       path: path.join(__dirname, 'build'),
-      filename: "index.html"
-    })
-  ]
+      filename: 'index.html',
+    }),
+  ],
 }
