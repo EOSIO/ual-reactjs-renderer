@@ -52,7 +52,7 @@ While the example ``TransactionApp`` will populate the ``actor`` and ``from`` fi
 yarn example
 ```
 
-Navigate to http://localhost:4000 to see the example application
+Navigate to http://localhost:3000 to see the example application
 
 ## Important
 
