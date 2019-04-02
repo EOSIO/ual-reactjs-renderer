@@ -67,7 +67,7 @@ A small example is provided in the [examples](https://github.com/EOSIO/ual-react
 cd examples
 cp default.env .env
 ```
-Now that you have a ``.env`` file, so you can set environment variables for your chain particulars.  Note that this file will not be version-controlled, nor should it be.
+Now that you have an ``.env`` file, you can set environment variables for your chain particulars.  Note that this file will not be version-controlled, nor should it be.
 The default settings for the file are...
 ```
 CHAIN_ID=cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f
@@ -75,7 +75,7 @@ RPC_PROTOCOL=http
 RPC_HOST=localhost
 RPC_PORT=8888
 ```
-These values are taken from the local chain created by following the [Developer Portal node set up instructions](https://developers.eos.io/eosio-home/docs/getting-the-software). _(Note: if this is your first time following the tutorial you will need to install the eosio binaries [here](https://developers.eos.io/eosio-home/docs/setting-up-your-environment))_  These can be edited according to the particulars of your project if you have a different chain set up.  They will be used as the chain data in the example app.
+These values are taken from the local chain created by following the [Developer Portal node set up instructions](https://developers.eos.io/eosio-home/docs/getting-the-software). _(Note: if this is your first time following the tutorial you will need to install the eosio binaries [here](https://developers.eos.io/eosio-home/docs/setting-up-your-environment))_  These can be edited according to the requirements of your project if you have a different chain set up.  They will be used as the chain data in the example app.
 *See the [Basic Example App for UAL with ReactJS](https://github.com/EOSIO/ual-reactjs-renderer/tree/develop/examples) for more details.*
 
 ## Development
