@@ -38,9 +38,9 @@
     "js-sha256": "^0.9.0",
     "nodemon": "^1.18.6",
     "typescript": "^3.2.2",
-    "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0",
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "@babel/runtime": "^7.2.0",
@@ -49,6 +49,7 @@
     "react-dom": "^16.6.3",
     "ual-lynx": "^0.1.0",
     "ual-reactjs-renderer": "^0.1.0",
-    "ual-scatter": "^0.1.0"
+    "ual-scatter": "^0.1.0",
+    "ual-ledger": "0.1.0"
   }
 }
