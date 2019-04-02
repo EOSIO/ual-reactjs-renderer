@@ -19,10 +19,10 @@ The example application uses an environment configuration for the chain and rpc 
 ## Environment Defaults
 The ``.env`` file that is generated from the first step has the following defaults:
 ```
-CHAIN_ID=12345
-RPC_PROTOCOL=https
-RPC_HOST=api.example.net
-RPC_PORT=443
+CHAIN_ID=cf057bbfb72640471fd910bcb67639c22df9f92470936cddc1ade0e2f2e7dc4f
+RPC_PROTOCOL=http
+RPC_HOST=localhost
+RPC_PORT=8888
 ```
 
 ## The Transaction Object
