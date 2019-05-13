@@ -14,5 +14,5 @@ export const withUAL = WrappedComponent => props => {
     </UALContext.Consumer>
   )
   WithUAL.displayName = `withUAL(${displayName})`
-  return <WithUAL/>
+  return <WithUAL {...props}/>
 }
