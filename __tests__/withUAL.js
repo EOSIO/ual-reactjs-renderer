@@ -9,7 +9,7 @@ jest.mock('../src/components/provider/UALContext', () => ({
   }
 }))
 
-describe('UALContext', () => {
+describe('withUAL', () => {
   let wrappedComponent
   let component
   let name
