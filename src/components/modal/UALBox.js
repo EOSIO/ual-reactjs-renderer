@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import i18n from '../../i18n'
 
 import { UALContainer } from './UALContainer'
-import { withUAL } from '../provider/UALContext'
+import { withUAL } from '../provider/withUAL'
 import { UALBoxParts } from './UALBoxParts'
 
 import { box } from '../../styles/box'
