@@ -1235,11 +1235,6 @@
     "@ledgerhq/errors" "^4.48.0"
     events "^3.0.0"
 
-"@types/jest@^23.3.1":
-  version "23.3.14"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-23.3.14.tgz#37daaf78069e7948520474c87b80092ea912520a"
-  integrity sha512-Q5hTcfdudEL2yOmluA1zaSyPbzWPmJ3XfSWeP3RyoYvS9hnje1ZyagrZOuQ6+1nQC1Gw+7gap3pLNL3xL6UBug==
-
 "@types/react@15.0.4":
   version "15.0.4"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.4.tgz#97aedbba00448a137331aa8450232124aeb8d426"
@@ -3532,7 +3527,7 @@ eos-lynx@1.1.3:
     bluebird "^3.5.2"
     socket.io-client "^2.1.1"
 
-eosjs-ecc@4.0.4, eosjs-ecc@^4.0.1:
+eosjs-ecc@4.0.4:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/eosjs-ecc/-/eosjs-ecc-4.0.4.tgz#431450f30a6f73088ff5d7ba1ebdfe967a5ca4ab"
   integrity sha512-9wAYefts4TidHOu+eN9nAisZdWpUzlUimZrB63oP7+/s4xRNJEn2Vvep2ICRODpxpidbshM1L7WaSYW9oiV5gA==
@@ -3570,16 +3565,6 @@ eosjs@20.0.0, eosjs@^20.0.0:
     babel-runtime "6.26.0"
     eosjs-ecc "4.0.4"
     text-encoding "0.7.0"
-
-eosjs@20.0.0-beta2:
-  version "20.0.0-beta2"
-  resolved "https://registry.yarnpkg.com/eosjs/-/eosjs-20.0.0-beta2.tgz#026255a13fefeb4d46a98b0c55de7b972de661c0"
-  integrity sha512-CtlM3Cy8Fh3sKik5h8of66Tj1zALlU48xQJB25HJ1DLUm58f9z2jPCZ0hfkOcCXMsRIxZu01NpPufN08qZjFnQ==
-  dependencies:
-    "@types/jest" "^23.3.1"
-    babel-polyfill "^6.26.0"
-    eosjs-ecc "^4.0.1"
-    text-encoding "^0.6.4"
 
 errno@^0.1.3, errno@~0.1.7:
   version "0.1.7"
@@ -6850,10 +6835,10 @@ sax@^1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-scatterjs-core@2.5.0:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/scatterjs-core/-/scatterjs-core-2.5.0.tgz#e23d1d40bebeb861c4375a7427392b3cb795dca1"
-  integrity sha512-Senfn+cihffudC7/katFr5fs4QayOgHKjlgmBJM9cBnESA+JO2wWgJ72LY9LwyJNHnepe3smf0Xjgo4XUAn00Q==
+scatterjs-core@2.7.17:
+  version "2.7.17"
+  resolved "https://registry.yarnpkg.com/scatterjs-core/-/scatterjs-core-2.7.17.tgz#f889e9d3bf1ba2003fc0411ad838fbfe42ed11fb"
+  integrity sha512-LKvg7nr2ViZgNyw7dzk5CbwDVz006PBFpJqKU1dx7fmMs9LmBov7gB60DFwLR9p3kirPWO2hon1TE/xe51pkFw==
   dependencies:
     create-hash "^1.2.0"
     es6-promise "^4.2.4"
@@ -6861,7 +6846,7 @@ scatterjs-core@2.5.0:
     isomorphic-ws "^4.0.1"
     ws "^6.1.0"
 
-scatterjs-plugin-eosjs2@^1.2.0:
+scatterjs-plugin-eosjs2@^1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/scatterjs-plugin-eosjs2/-/scatterjs-plugin-eosjs2-1.5.0.tgz#4e8e08859c82af7b9c0b275ea57c9739a373cc18"
   integrity sha512-RIYGW+c4dH//jwcAflcnI2N+erzy2AHQwfqMr8CTMCRg2S8Drm/PWf/iDn1JHsjbyTv1+kIP335zWz7xP92iAQ==
@@ -7456,11 +7441,6 @@ text-encoding@0.7.0:
   resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.7.0.tgz#f895e836e45990624086601798ea98e8f36ee643"
   integrity sha512-oJQ3f1hrOnbRLOcwKz0Liq2IcrvDeZRHXhd9RgLrsT+DjWY/nty1Hi7v3dtkaEYbPYe0mUoOfzRrMwfXXwgPUA==
 
-text-encoding@^0.6.4:
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/text-encoding/-/text-encoding-0.6.4.tgz#e399a982257a276dae428bb92845cb71bdc26d19"
-  integrity sha1-45mpgiV6J22uQou5KEXLcb3CbRk=
-
 text-table@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
@@ -7605,10 +7585,10 @@ u2f-api@0.2.7:
   resolved "https://registry.yarnpkg.com/u2f-api/-/u2f-api-0.2.7.tgz#17bf196b242f6bf72353d9858e6a7566cc192720"
   integrity sha512-fqLNg8vpvLOD5J/z4B6wpPg4Lvowz1nJ9xdHcCzdUPKcFE/qNCceV2gNZxSJd5vhAZemHr/K/hbzVA0zxB5mkg==
 
-ual-ledger@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ual-ledger/-/ual-ledger-0.1.0.tgz#666a678e68e95b62dc1eef641e6f1cd6e4c9dac2"
-  integrity sha512-fL2bSrejoLEGA0z/FeFneRHpSCQuXfl29xmTmR/daeThWC1TfNeW1FENts5CT6msk8md9JKQl9KtxhYShaN6Og==
+ual-ledger@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ual-ledger/-/ual-ledger-0.1.1.tgz#b9800ca81174e34489b3f3826ccc2fe1a834a2af"
+  integrity sha512-o3bCGVtfi67VeTiMrkvSRfk8gWcV1cnMYVbKPykf38kAO74ou+LlOB9Q0hScSQWlH2nM0cheLSv71gHnBnydLA==
   dependencies:
     eosjs "20.0.0"
     eosjs-ledger-signature-provider "0.1.1"
@@ -7624,10 +7604,10 @@ ual-lynx@^0.1.0:
     eosjs "^20.0.0"
     universal-authenticator-library "^0.1.0"
 
-ual-reactjs-renderer@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ual-reactjs-renderer/-/ual-reactjs-renderer-0.1.0.tgz#0c61e59d2af8e1695b5f16ec97fad505981f57f4"
-  integrity sha512-QwUuRFBvJZRpJ5nyZ43607OviKBaSh0OD4FERMB2il0UHM6B+EfTHreAVVl2T5gPn+EbFO0WoPkl9TKVWyPJlg==
+ual-reactjs-renderer@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/ual-reactjs-renderer/-/ual-reactjs-renderer-0.1.2.tgz#4648208be772fbef9841128824a344e5a46dfdc4"
+  integrity sha512-xeHncHz07IQCraz1cvTDuxs9MMsUeXkFTBCQA4dHhyrBO/LRd+R0OnS2hOpycLI9pG4vkKZeVFZzKutlG/z/Xg==
   dependencies:
     i18next "^14.0.1"
     i18next-browser-languagedetector "^2.2.4"
@@ -7639,15 +7619,15 @@ ual-reactjs-renderer@^0.1.0:
     styled-components "^4.1.3"
     universal-authenticator-library "^0.1.0"
 
-ual-scatter@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/ual-scatter/-/ual-scatter-0.1.0.tgz#9a197aa27aad1d861a061a927620bda1077a4797"
-  integrity sha512-yXJ6shHN3NQmdcmCI0sZcrEOV4lyykQExfQaual1NpFqDKJnWI6EfKZrgsbtGaOTpQV9F4jK5Nsev8BY3/l3Zw==
+ual-scatter@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ual-scatter/-/ual-scatter-0.1.1.tgz#f789ad786ee9fc2ba747029a182ed63587028b28"
+  integrity sha512-gcQrQdleQSYlPrZcxzU8DVJQReqLO2v1zoOpMspCMCdb0MZF2zIT2Gzp7udrbO1U+5s/no8YVzKnMtjCPEepzw==
   dependencies:
-    eosjs "20.0.0-beta2"
+    eosjs "20.0.0"
     eosjs-ecc "4.0.4"
-    scatterjs-core "2.5.0"
-    scatterjs-plugin-eosjs2 "^1.2.0"
+    scatterjs-core "2.7.17"
+    scatterjs-plugin-eosjs2 "^1.5.0"
     universal-authenticator-library "0.1.0"
 
 uglify-js@3.4.x:

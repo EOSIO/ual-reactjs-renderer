@@ -66,7 +66,7 @@ class TransactionApp extends React.Component<TransactionProps, TransactionState>
     super(props)
     this.state = {
       ...defaultState,
-      rpc: new JsonRpc(`${EXAMPLE_ENV.RPC_PROTOCOL}://${EXAMPLE_ENV.RPC_HOST}`)
+      rpc: new JsonRpc(`${EXAMPLE_ENV.RPC_PROTOCOL}://${EXAMPLE_ENV.RPC_HOST}:${EXAMPLE_ENV.RPC_PORT}`)
     }
     this.updateAccountBalance = this.updateAccountBalance.bind(this)
     this.updateAccountName = this.updateAccountName.bind(this)
