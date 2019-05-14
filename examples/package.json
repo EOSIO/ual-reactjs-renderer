@@ -47,9 +47,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "ual-ledger": "^0.1.1",
     "ual-lynx": "^0.1.0",
-    "ual-reactjs-renderer": "^0.1.0",
-    "ual-scatter": "^0.1.0",
-    "ual-ledger": "0.1.0"
+    "ual-reactjs-renderer": "^0.1.2",
+    "ual-scatter": "^0.1.1"
   }
 }
