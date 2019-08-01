@@ -15,6 +15,12 @@
     "example": "webpack-dev-server --config webpack.config.react.js",
     "lint": "eslint ../src/**/*.js"
   },
+  "resolutions": {
+    "lodash": "^4.17.15",
+    "mixin-deep": "^2.0.1",
+    "set-value": "^3.0.1",
+    "braces": "2.3.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/node": "^7.2.2",
@@ -47,9 +53,9 @@
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "ual-ledger": "^0.1.1",
+    "ual-ledger": "^0.1.2",
     "ual-lynx": "^0.1.0",
     "ual-reactjs-renderer": "^0.1.2",
-    "ual-scatter": "^0.1.1"
+    "ual-scatter": "^0.1.5"
   }
 }
