@@ -1,6 +1,6 @@
 {
   "name": "ual-reactjs-renderer-example",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "author": {
     "name": "block.one",
@@ -55,7 +55,7 @@
     "react-dom": "^16.6.3",
     "ual-ledger": "^0.1.2",
     "ual-lynx": "^0.1.0",
-    "ual-reactjs-renderer": "^0.1.2",
+    "ual-reactjs-renderer": "^0.1.4",
     "ual-scatter": "^0.1.5"
   }
 }

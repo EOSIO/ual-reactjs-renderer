@@ -7532,10 +7532,10 @@ ual-lynx@^0.1.0:
     eosjs "^20.0.0"
     universal-authenticator-library "^0.1.0"
 
-ual-reactjs-renderer@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/ual-reactjs-renderer/-/ual-reactjs-renderer-0.1.2.tgz#4648208be772fbef9841128824a344e5a46dfdc4"
-  integrity sha512-xeHncHz07IQCraz1cvTDuxs9MMsUeXkFTBCQA4dHhyrBO/LRd+R0OnS2hOpycLI9pG4vkKZeVFZzKutlG/z/Xg==
+ual-reactjs-renderer@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/ual-reactjs-renderer/-/ual-reactjs-renderer-0.1.4.tgz#f49ef7585be0c8257707437a217be5911018a6fb"
+  integrity sha512-/+CG12JkDC/VUHgCsAyyGJ9trpQjd/kNnEter/mf8A+a4zlYoGQxfCu4uH/g4/RrTPcRbOOcGO+SPKUwBO8Opg==
   dependencies:
     i18next "^14.0.1"
     i18next-browser-languagedetector "^2.2.4"
@@ -7545,7 +7545,7 @@ ual-reactjs-renderer@^0.1.2:
     react-icons "^3.4.0"
     react-tooltip "^3.9.2"
     styled-components "^4.1.3"
-    universal-authenticator-library "^0.1.0"
+    universal-authenticator-library "^0.1.2"
 
 ual-scatter@^0.1.5:
   version "0.1.5"
@@ -7627,7 +7627,7 @@ unique-string@^1.0.0:
   dependencies:
     crypto-random-string "^1.0.0"
 
-universal-authenticator-library@0.1.2, universal-authenticator-library@^0.1.1:
+universal-authenticator-library@0.1.2, universal-authenticator-library@^0.1.1, universal-authenticator-library@^0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universal-authenticator-library/-/universal-authenticator-library-0.1.2.tgz#bc1afa61a1f61837f48bfbd7efa08183a2136b97"
   integrity sha512-vtvw+wfwGcdfRRT/Bzr+f5YZnhaWVf+U1nSmDonGsxXThLU07ec8zPorXd15v7x9t9mMYbs985ZScYVohHB/9w==
