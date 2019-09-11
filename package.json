@@ -20,10 +20,6 @@
     "prepare": "yarn build",
     "docs": "jsdoc src -r -d docs"
   },
-  "resolutions": {
-    "lodash": "^4.17.15",
-    "marked": "^0.7.0"
-  },
   "dependencies": {
     "i18next": "14.0.1",
     "i18next-browser-languagedetector": "2.2.4",
