@@ -7,7 +7,8 @@
     "url": "https://block.one/"
   },
   "collaborators": [
-    "Nasser Abouelazm"
+    "Nasser Abouelazm",
+    "Mike Manfredi"
   ],
   "license": "MIT",
   "scripts": {
