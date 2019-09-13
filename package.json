@@ -1,6 +1,6 @@
 {
   "name": "ual-reactjs-renderer",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "main": "dist/index.js",
   "author": {
     "name": "block.one",
