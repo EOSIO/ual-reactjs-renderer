@@ -1,25 +1,20 @@
 {
   "name": "ual-reactjs-renderer-example",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
   },
   "collaborators": [
-    "Nasser Abouelazm"
+    "Nasser Abouelazm",
+    "Mike Manfredi"
   ],
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.react.js",
     "example": "webpack-dev-server --config webpack.config.react.js",
     "lint": "eslint ../src/**/*.js"
-  },
-  "resolutions": {
-    "lodash": "^4.17.15",
-    "mixin-deep": "^2.0.1",
-    "set-value": "^3.0.1",
-    "braces": "2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
@@ -49,13 +44,13 @@
     "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.2.0",
-    "prop-types": "^15.6.2",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "ual-ledger": "^0.1.2",
-    "ual-lynx": "^0.1.0",
-    "ual-reactjs-renderer": "^0.1.4",
-    "ual-scatter": "^0.1.5"
+    "@babel/runtime": "7.2.0",
+    "prop-types": "15.6.2",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "ual-ledger": "0.1.3",
+    "ual-lynx": "0.2.2",
+    "ual-reactjs-renderer": "0.1.5",
+    "ual-scatter": "0.1.6"
   }
 }
