@@ -1,7 +1,9 @@
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
-const dotenv = require('dotenv').config()
+const fs = require('fs')
+
+require('dotenv').config()
 
 module.exports = {
   mode: "development",
@@ -46,6 +48,14 @@ module.exports = {
     contentBase: path.join(__dirname, 'build')
   },
   plugins: [
+    function () {
+      this.plugin('done', function (stats) {
+        if (!fs.existsSync('.env')) {
+          console.error('\n\nERROR: No .env file found... Did you copy default.env to .env?\n\n');
+          process.exit(1);
+        }
+      });
+    },
     new webpack.DefinePlugin({
       'EXAMPLE_ENV': {
         'CHAIN_ID': JSON.stringify(process.env.CHAIN_ID),
