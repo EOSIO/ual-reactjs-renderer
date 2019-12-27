@@ -52,7 +52,7 @@
     "enzyme-to-json": "^3.3.5",
     "eslint": "^6.3.0",
     "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "jest-enzyme": "^7.0.1",
     "jsdoc": "^3.5.5",
     "tslint": "^5.11.0",
