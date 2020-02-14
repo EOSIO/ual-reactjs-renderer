@@ -239,6 +239,7 @@ export class UALProvider extends Component {
         const availableCheck = setInterval(() => {
           if (!authenticator.isLoading()) {
             clearInterval(availableCheck)
+            if (!authenticator.shouldAutoLogin()) return;
             // Only Ledger requires an account name
             if (accountName) {
               submitAccountForLogin(accountName, authenticator)
