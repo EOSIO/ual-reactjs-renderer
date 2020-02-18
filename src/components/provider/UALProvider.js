@@ -170,7 +170,7 @@ export class UALProvider extends Component {
           const accountName = await users[0].getAccountName()
           if (!isAutoLogin) {
             window.localStorage.setItem('UALLoggedInAuthType', authenticator.constructor.name)
-            this.setUALInvalidateAt()
+            this.setUALInvalidateAt(authenticator)
           }
           broadcastStatus({
             activeUser: users[users.length - 1],
@@ -214,7 +214,7 @@ export class UALProvider extends Component {
             users,
             message: i18n.t('currentlyLoggedInAs', { accountName: accountInput }),
           })
-          this.setUALInvalidateAt()
+          this.setUALInvalidateAt(authenticator)
         } catch (err) {
           broadcastStatus({
             error: err,
@@ -231,10 +231,7 @@ export class UALProvider extends Component {
     let type = window.localStorage.getItem('UALLoggedInAuthType')
     const invalidate = window.localStorage.getItem('UALInvalidateAt')
     const accountName = window.localStorage.getItem('UALAccountName')
-    if (type && invalidate && new Date(invalidate) <= new Date()) {
-      this.clearCache();
-      type = undefined;
-    }
+    type = this.checkForInvalidatedSession(type, invalidate);
     const ual = new UAL(chains, appName, authenticators)
     try {
       const { availableAuthenticators } = ual.getAuthenticators()
@@ -287,6 +284,21 @@ export class UALProvider extends Component {
       this.clearCache()
     }
     return loggedIn.length ? loggedIn[0] : false
+  }
+
+  /**
+   * Checks if the saved browser session has passed the UALInvalidateAt date and clear the cache if true
+   * @method
+   * @param {string} type - UALLoggedInAuthType value
+   * @param {string} invalidate - UALInvalidateAt value in string formatted date
+   * @return {string|undefined} - UALLoggedInAuthType value or undefined if no longer valid
+   */
+  checkForInvalidatedSession = (type, invalidate) => {
+    if (type && invalidate && new Date(invalidate) <= new Date()) {
+      this.clearCache();
+      return undefined;
+    }
+    return type;
   }
 
   /**
