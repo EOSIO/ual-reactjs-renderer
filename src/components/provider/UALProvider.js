@@ -232,9 +232,7 @@ export class UALProvider extends Component {
     const invalidate = window.localStorage.getItem('UALInvalidateAt')
     const accountName = window.localStorage.getItem('UALAccountName')
     if (type && invalidate && new Date(invalidate) <= new Date()) {
-      window.localStorage.removeItem('UALLoggedInAuthType');
-      window.localStorage.removeItem('UALInvalidateAt');
-      window.localStorage.removeItem('UALAccountName');
+      this.clearCache();
       type = undefined;
     }
     const ual = new UAL(chains, appName, authenticators)
@@ -337,6 +335,7 @@ export class UALProvider extends Component {
   clearCache = () => {
     window.localStorage.removeItem('UALLoggedInAuthType')
     window.localStorage.removeItem('UALAccountName')
+    window.localStorage.removeItem('UALInvalidateAt')
   }
 
   /**
