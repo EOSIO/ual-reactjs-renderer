@@ -170,6 +170,7 @@ export class UALProvider extends Component {
           const accountName = await users[0].getAccountName()
           if (!isAutoLogin) {
             window.localStorage.setItem('UALLoggedInAuthType', authenticator.constructor.name)
+            this.setUALInvalidateAt()
           }
           broadcastStatus({
             activeUser: users[users.length - 1],
@@ -213,6 +214,7 @@ export class UALProvider extends Component {
             users,
             message: i18n.t('currentlyLoggedInAs', { accountName: accountInput }),
           })
+          this.setUALInvalidateAt()
         } catch (err) {
           broadcastStatus({
             error: err,
@@ -226,8 +228,15 @@ export class UALProvider extends Component {
 
   componentDidMount() {
     const { chains, appName, authenticators, authenticateWithoutAccountInput, submitAccountForLogin } = this.state
-    const type = window.localStorage.getItem('UALLoggedInAuthType')
+    let type = window.localStorage.getItem('UALLoggedInAuthType')
+    const invalidate = window.localStorage.getItem('UALInvalidateAt')
     const accountName = window.localStorage.getItem('UALAccountName')
+    if (type && invalidate && new Date(invalidate) <= new Date()) {
+      window.localStorage.removeItem('UALLoggedInAuthType');
+      window.localStorage.removeItem('UALInvalidateAt');
+      window.localStorage.removeItem('UALAccountName');
+      type = undefined;
+    }
     const ual = new UAL(chains, appName, authenticators)
     try {
       const { availableAuthenticators } = ual.getAuthenticators()
@@ -239,7 +248,6 @@ export class UALProvider extends Component {
         const availableCheck = setInterval(() => {
           if (!authenticator.isLoading()) {
             clearInterval(availableCheck)
-            if (!authenticator.shouldAutoLogin()) return;
             // Only Ledger requires an account name
             if (accountName) {
               submitAccountForLogin(accountName, authenticator)
@@ -281,6 +289,19 @@ export class UALProvider extends Component {
       this.clearCache()
     }
     return loggedIn.length ? loggedIn[0] : false
+  }
+
+  /**
+   * Sets UALInvalidateAt value to local storage depending on amount of seconds set in authenticator
+   * @method
+   * @param {Authenticator} authenticator - should-invalidate-after authenticator
+   * @return {Void}
+   */
+  setUALInvalidateAt = (authenticator) => {
+    const invalidateSeconds = authenticator.shouldInvalidateAfter();
+    const invalidateAt = new Date();
+    invalidateAt.setSeconds(invalidateAt.getSeconds() + invalidateSeconds);
+    window.localStorage.setItem('UALInvalidateAt', invalidateAt)
   }
 
   /**
