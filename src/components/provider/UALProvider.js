@@ -112,8 +112,6 @@ export class UALProvider extends Component {
        * @return {Void}
        */
       showModal: () => {
-        const { availableAuthenticators } = this.state
-        availableAuthenticators.forEach(auth => auth.reset())
         this.setState({ modal: true })
       },
       /**
@@ -229,8 +227,8 @@ export class UALProvider extends Component {
     const type = window.localStorage.getItem('UALLoggedInAuthType')
     const accountName = window.localStorage.getItem('UALAccountName')
     const ual = new UAL(chains, appName, authenticators)
+    const { availableAuthenticators, autoLoginAuthenticator } = ual.getAuthenticators()
     try {
-      const { availableAuthenticators } = ual.getAuthenticators()
       if (type) {
         const authenticator = this.getAuthenticatorInstance(type, availableAuthenticators)
         if (!authenticator) {
@@ -255,7 +253,6 @@ export class UALProvider extends Component {
       const errType = UALErrorType.Login
       console.warn(new UALError(msg, errType, e, source))
     } finally {
-      const { availableAuthenticators, autoLoginAuthenticator } = ual.getAuthenticators()
       this.fetchAuthenticators(availableAuthenticators, autoLoginAuthenticator)
     }
   }
