@@ -8,4 +8,4 @@ export const baseLink = {
   color: 'inherit',
 }
 
-export const baseFont = '@import url(\'https://fonts.googleapis.com/css?family=Source+Sans+Pro\');'
+export const baseFont = '@import https://fonts.googleapis.com/css?family=Source+Sans+Pro;'

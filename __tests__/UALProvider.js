@@ -38,15 +38,31 @@ describe('UALProvider', () => {
       expect(spy).toHaveBeenCalled()
     })
 
-    it('that attempts auto-login if authenticator type is in localStorage', async () => {
+    it('that attempts auto-login if authenticator type is in localStorage and not invalidated', async () => {
       localStorage.setItem('UALAccountName', 'Example')
       localStorage.setItem('UALLoggedInAuthType', 'Scatter')
+      const invalidateAt = new Date();
+      invalidateAt.setSeconds(invalidateAt.getSeconds() + 100);
+      window.localStorage.setItem('UALInvalidateAt', invalidateAt)
+
       const spy = jest.spyOn(wrapper.instance(), 'getAuthenticatorInstance')
       wrapper.instance().componentDidMount()
       expect(spy).toHaveBeenCalled()
     })
 
     it('that does not attempt to auto-login if localStorage is empty', async () => {
+      const spy = jest.spyOn(wrapper.instance(), 'getAuthenticatorInstance')
+      wrapper.instance().componentDidMount()
+      expect(spy).not.toHaveBeenCalled()
+    })
+
+    it('that does not attempt to auto-login if localStorage is outdated', async () => {
+      localStorage.setItem('UALAccountName', 'Example')
+      localStorage.setItem('UALLoggedInAuthType', 'Scatter')
+      const invalidateAt = new Date();
+      invalidateAt.setSeconds(invalidateAt.getSeconds() - 1);
+      window.localStorage.setItem('UALInvalidateAt', invalidateAt)
+
       const spy = jest.spyOn(wrapper.instance(), 'getAuthenticatorInstance')
       wrapper.instance().componentDidMount()
       expect(spy).not.toHaveBeenCalled()
@@ -138,15 +154,20 @@ describe('UALProvider', () => {
     it('that clears the localStorage', () => {
       localStorage.setItem('UALAccountName', 'Example')
       localStorage.setItem('UALLoggedInAuthType', 'Scatter')
+      const invalidateAt = new Date();
+      invalidateAt.setSeconds(invalidateAt.getSeconds() - 1);
+      window.localStorage.setItem('UALInvalidateAt', invalidateAt)
       const activeAuthenticator = wrapper.state().availableAuthenticators[0]
       wrapper.setState({
         activeAuthenticator,
       })
       expect(localStorage.hasOwnProperty('UALAccountName')).toBe(true)
       expect(localStorage.hasOwnProperty('UALLoggedInAuthType')).toBe(true)
+      expect(localStorage.hasOwnProperty('UALInvalidateAt')).toBe(true)
       wrapper.state().logout()
       expect(localStorage.hasOwnProperty('UALAccountName')).toBe(false)
       expect(localStorage.hasOwnProperty('UALLoggedInAuthType')).toBe(false)
+      expect(localStorage.hasOwnProperty('UALInvalidateAt')).toBe(false)
     })
   })
 })

@@ -1,6 +1,6 @@
 {
   "name": "ual-reactjs-renderer",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "author": {
     "name": "block.one",
@@ -30,7 +30,7 @@
     "react-icons": "3.4.0",
     "react-tooltip": "3.9.2",
     "styled-components": "4.1.3",
-    "universal-authenticator-library": "0.1.4"
+    "universal-authenticator-library": "0.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -52,7 +52,7 @@
     "enzyme-to-json": "^3.3.5",
     "eslint": "^6.3.0",
     "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
-    "jest": "^24.8.0",
+    "jest": "^24.9.0",
     "jest-enzyme": "^7.0.1",
     "jsdoc": "^3.5.5",
     "tslint": "^5.11.0",

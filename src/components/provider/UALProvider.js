@@ -112,8 +112,6 @@ export class UALProvider extends Component {
        * @return {Void}
        */
       showModal: () => {
-        const { availableAuthenticators } = this.state
-        availableAuthenticators.forEach(auth => auth.reset())
         this.setState({ modal: true })
       },
       /**
@@ -170,6 +168,7 @@ export class UALProvider extends Component {
           const accountName = await users[0].getAccountName()
           if (!isAutoLogin) {
             window.localStorage.setItem('UALLoggedInAuthType', authenticator.constructor.name)
+            this.setUALInvalidateAt(authenticator)
           }
           broadcastStatus({
             activeUser: users[users.length - 1],
@@ -213,6 +212,7 @@ export class UALProvider extends Component {
             users,
             message: i18n.t('currentlyLoggedInAs', { accountName: accountInput }),
           })
+          this.setUALInvalidateAt(authenticator)
         } catch (err) {
           broadcastStatus({
             error: err,
@@ -226,11 +226,13 @@ export class UALProvider extends Component {
 
   componentDidMount() {
     const { chains, appName, authenticators, authenticateWithoutAccountInput, submitAccountForLogin } = this.state
-    const type = window.localStorage.getItem('UALLoggedInAuthType')
+    let type = window.localStorage.getItem('UALLoggedInAuthType')
+    const invalidate = window.localStorage.getItem('UALInvalidateAt')
     const accountName = window.localStorage.getItem('UALAccountName')
+    type = this.checkForInvalidatedSession(type, invalidate);
     const ual = new UAL(chains, appName, authenticators)
+    const { availableAuthenticators, autoLoginAuthenticator } = ual.getAuthenticators()
     try {
-      const { availableAuthenticators } = ual.getAuthenticators()
       if (type) {
         const authenticator = this.getAuthenticatorInstance(type, availableAuthenticators)
         if (!authenticator) {
@@ -255,7 +257,6 @@ export class UALProvider extends Component {
       const errType = UALErrorType.Login
       console.warn(new UALError(msg, errType, e, source))
     } finally {
-      const { availableAuthenticators, autoLoginAuthenticator } = ual.getAuthenticators()
       this.fetchAuthenticators(availableAuthenticators, autoLoginAuthenticator)
     }
   }
@@ -280,6 +281,34 @@ export class UALProvider extends Component {
       this.clearCache()
     }
     return loggedIn.length ? loggedIn[0] : false
+  }
+
+  /**
+   * Checks if the saved browser session has passed the UALInvalidateAt date and clear the cache if true
+   * @method
+   * @param {string} type - UALLoggedInAuthType value
+   * @param {string} invalidate - UALInvalidateAt value in string formatted date
+   * @return {string|undefined} - UALLoggedInAuthType value or undefined if no longer valid
+   */
+  checkForInvalidatedSession = (type, invalidate) => {
+    if (type && invalidate && new Date(invalidate) <= new Date()) {
+      this.clearCache();
+      return undefined;
+    }
+    return type;
+  }
+
+  /**
+   * Sets UALInvalidateAt value to local storage depending on amount of seconds set in authenticator
+   * @method
+   * @param {Authenticator} authenticator - should-invalidate-after authenticator
+   * @return {Void}
+   */
+  setUALInvalidateAt = (authenticator) => {
+    const invalidateSeconds = authenticator.shouldInvalidateAfter();
+    const invalidateAt = new Date();
+    invalidateAt.setSeconds(invalidateAt.getSeconds() + invalidateSeconds);
+    window.localStorage.setItem('UALInvalidateAt', invalidateAt)
   }
 
   /**
@@ -315,6 +344,7 @@ export class UALProvider extends Component {
   clearCache = () => {
     window.localStorage.removeItem('UALLoggedInAuthType')
     window.localStorage.removeItem('UALAccountName')
+    window.localStorage.removeItem('UALInvalidateAt')
   }
 
   /**
