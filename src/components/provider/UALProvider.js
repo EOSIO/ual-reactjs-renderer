@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unused-state */
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import i18n from '../../i18n'
@@ -229,7 +228,7 @@ export class UALProvider extends Component {
     let type = window.localStorage.getItem('UALLoggedInAuthType')
     const invalidate = window.localStorage.getItem('UALInvalidateAt')
     const accountName = window.localStorage.getItem('UALAccountName')
-    type = this.checkForInvalidatedSession(type, invalidate);
+    type = this.checkForInvalidatedSession(type, invalidate)
     const ual = new UAL(chains, appName, authenticators)
     const { availableAuthenticators, autoLoginAuthenticator } = ual.getAuthenticators()
     try {
@@ -270,6 +269,7 @@ export class UALProvider extends Component {
 
   /**
    * Verifies a logged in user's authenticator is still app supported
+   *
    * @method
    * @param {string} type - authenticator type of sessioned user
    * @param {Object[]} availableAuthenticators - list of available app supported authenticators
@@ -285,6 +285,7 @@ export class UALProvider extends Component {
 
   /**
    * Checks if the saved browser session has passed the UALInvalidateAt date and clear the cache if true
+   *
    * @method
    * @param {string} type - UALLoggedInAuthType value
    * @param {string} invalidate - UALInvalidateAt value in string formatted date
@@ -292,27 +293,29 @@ export class UALProvider extends Component {
    */
   checkForInvalidatedSession = (type, invalidate) => {
     if (type && invalidate && new Date(invalidate) <= new Date()) {
-      this.clearCache();
-      return undefined;
+      this.clearCache()
+      return undefined
     }
-    return type;
+    return type
   }
 
   /**
    * Sets UALInvalidateAt value to local storage depending on amount of seconds set in authenticator
+   *
    * @method
    * @param {Authenticator} authenticator - should-invalidate-after authenticator
    * @return {Void}
    */
   setUALInvalidateAt = (authenticator) => {
-    const invalidateSeconds = authenticator.shouldInvalidateAfter();
-    const invalidateAt = new Date();
-    invalidateAt.setSeconds(invalidateAt.getSeconds() + invalidateSeconds);
+    const invalidateSeconds = authenticator.shouldInvalidateAfter()
+    const invalidateAt = new Date()
+    invalidateAt.setSeconds(invalidateAt.getSeconds() + invalidateSeconds)
     window.localStorage.setItem('UALInvalidateAt', invalidateAt)
   }
 
   /**
    * Renders available authenticators or starts auto-login process if applicable
+   *
    * @method
    * @param {Authenticator[]} availableAuthenticators - list of available app supported authenticators
    * @param {Authenticator} autoLoginAuthenticator - auto-login authenticator
@@ -338,6 +341,7 @@ export class UALProvider extends Component {
 
   /**
    * Clears locally stored user session
+   *
    * @method
    * @return {Void}
    */
@@ -349,6 +353,7 @@ export class UALProvider extends Component {
 
   /**
    * Clears localStorage and logs out user
+   *
    * @method
    * @param {Authenticator} authenticator - used authenticator
    * @return {Void}

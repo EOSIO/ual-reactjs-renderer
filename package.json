@@ -14,10 +14,10 @@
   "scripts": {
     "ts-build": "tsc --build tsconfig.json",
     "build": "babel src --out-dir dist --source-maps",
-    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
+    "lint-fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
     "test": "jest",
     "watch-test": "jest --watch --verbose=true",
-    "eslint": "eslint src/**/*.js",
     "prepare": "yarn build",
     "docs": "jsdoc src -r -d docs"
   },
@@ -39,8 +39,7 @@
     "@babel/plugin-transform-regenerator": "^7.0.0",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
-    "@blockone/eslint-config-blockone": "^1.1.1",
-    "@blockone/tslint-config-blockone": "^1.0.0",
+    "@blockone/eslint-config-blockone": "^3.0.0",
     "@types/i18next": "^12.1.0",
     "@types/i18next-browser-languagedetector": "^2.0.1",
     "@types/jest": "^24.0.15",
@@ -50,12 +49,10 @@
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
     "enzyme-to-json": "^3.3.5",
-    "eslint": "^6.3.0",
-    "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
+    "eslint": "^6.8.0",
     "jest": "^24.9.0",
     "jest-enzyme": "^7.0.1",
     "jsdoc": "^3.5.5",
-    "tslint": "^5.11.0",
     "typescript": "^3.2.2"
   }
 }

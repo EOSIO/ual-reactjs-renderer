@@ -43,6 +43,7 @@ class UALBoxBase extends Component {
 
   /**
    * Attempts authentication
+   *
    * @method
    * @return {Void}
    * @param {Authenticator} authenticator
@@ -59,6 +60,7 @@ class UALBoxBase extends Component {
 
   /**
    * Checks if all available authenticators have errored
+   *
    * @method
    * @return {Void}
    */
@@ -75,6 +77,7 @@ class UALBoxBase extends Component {
 
   /**
    * Transitions to authenticator's account input screen
+   *
    * @method
    * @return {Void}
    * @param {Authenticator} authenticator
@@ -98,6 +101,7 @@ class UALBoxBase extends Component {
 
   /**
    * Transitions to authenticator's install screen
+   *
    * @method
    * @return {Void}
    * @param {Authenticator} authenticator
@@ -123,6 +127,7 @@ class UALBoxBase extends Component {
 
   /**
    * Returns to authenticator select screen
+   *
    * @method
    * @return {Void}
    */
@@ -147,6 +152,7 @@ class UALBoxBase extends Component {
 
   /**
    * Attempts authentication
+   *
    * @method
    * @return {Void}
    * @param {Authenticator} authenticator
@@ -246,7 +252,7 @@ UALBoxBase.propTypes = {
     authenticators: PropTypes.arrayOf(PropTypes.object).isRequired,
     availableAuthenticators: PropTypes.arrayOf(PropTypes.object).isRequired,
     loading: PropTypes.bool.isRequired,
-    activeUser: PropTypes.object, // eslint-disable-line
+    activeUser: PropTypes.object,
     message: PropTypes.string.isRequired,
     broadcastStatus: PropTypes.func.isRequired,
     hideModal: PropTypes.func.isRequired,

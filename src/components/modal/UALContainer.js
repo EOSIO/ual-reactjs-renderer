@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import {
-	container,
-	containerAnimated,
-	containerCenter,
-	containerRight,
-	containerLeft
+  container,
+  containerAnimated,
+  containerCenter,
+  containerRight,
+  containerLeft
 } from '../../styles/container'
 
 /**
