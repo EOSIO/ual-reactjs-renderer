@@ -18,11 +18,11 @@
   },
   "lib": ["esnext"],
   "include": [
-    "src/**/*.ts",
+    "src/**/*.tsx",
     "examples/**/*"
   ],
   "exclude": [
-    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
     "public",
     "node_modules"
   ]
