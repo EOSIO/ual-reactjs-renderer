@@ -1,9 +1,9 @@
 sudo: false
 language: node_js
 node_js:
-- '10.13.0'
+  - '12.14.1'
 stages:
-- test
+  - test
 jobs:
   include:
   - stage: test
