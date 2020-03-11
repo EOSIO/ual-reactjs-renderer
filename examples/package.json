@@ -30,7 +30,6 @@
     "eslint": "^5.10.0",
     "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
     "html-webpack-plugin": "^3.2.0",
-    "js-sha256": "^0.9.0",
     "typescript": "^3.8.3",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
