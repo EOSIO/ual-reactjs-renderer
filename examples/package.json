@@ -24,12 +24,8 @@
     "@blockone/eslint-config-blockone": "^0.0.5",
     "@types/react": "15.0.4",
     "awesome-typescript-loader": "^5.2.1",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.0.4",
     "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "dotenv": "^8.2.0",
     "eslint": "^5.10.0",
     "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
@@ -47,7 +43,7 @@
     "react-dom": "16.13.0",
     "ual-ledger": "0.2.0",
     "ual-lynx": "0.3.0",
-    "ual-reactjs-renderer": "file:../",
+    "ual-reactjs-renderer": "^0.2.0",
     "ual-scatter": "0.2.0"
   }
 }
