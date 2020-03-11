@@ -17,8 +17,8 @@
     "lint": "eslint ../src/**/*.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.0",
-    "@babel/node": "^7.2.2",
+    "@babel/core": "^7.8.7",
+    "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "@blockone/eslint-config-blockone": "^0.0.5",
