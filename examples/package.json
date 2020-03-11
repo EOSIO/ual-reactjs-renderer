@@ -12,9 +12,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "webpack --config webpack.config.react.js",
-    "example": "webpack-dev-server --config webpack.config.react.js",
-    "lint": "eslint ../src/**/*.js"
+    "build": "rm -rf build && webpack --config webpack.config.react.js",
+    "lint": "eslint ../src/**/*.js",
+    "example": "webpack-dev-server --config webpack.config.react.js"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
