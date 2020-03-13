@@ -9,9 +9,9 @@ import { UALContext } from './UALContext'
  */
 export const withUAL = WrappedComponent => props => {
   const displayName = WrappedComponent.displayName || WrappedComponent.name || 'Component'
-  const WithUAL = props => (
+  const WithUAL = wrappedProps => (
     <UALContext.Consumer>
-      { context =>  <WrappedComponent {...props} ual={context} /> }
+      { context =>  <WrappedComponent {...wrappedProps} ual={context} /> }
     </UALContext.Consumer>
   )
   WithUAL.displayName = `withUAL(${displayName})`

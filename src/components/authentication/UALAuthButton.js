@@ -162,14 +162,14 @@ export class UALAuthButton extends Component {
   renderIcon = () => {
     const { button } = this.state
     switch (button) {
-      case buttonState.LOADING:
-        return <UALLoadingIcon />
-      case buttonState.ERRORED:
-        return <IoMdInformationCircleOutline style={errored} />
-      case buttonState.UNAVAILABLE:
-        return <FaDownload />
-      default:
-        return <FaChevronRight />
+    case buttonState.LOADING:
+      return <UALLoadingIcon />
+    case buttonState.ERRORED:
+      return <IoMdInformationCircleOutline style={errored} />
+    case buttonState.UNAVAILABLE:
+      return <FaDownload />
+    default:
+      return <FaChevronRight />
     }
   }
 
@@ -220,6 +220,6 @@ UALAuthButton.propTypes = {
   onAuthenticatorSelect: PropTypes.func.isRequired,
   onRequestInstall: PropTypes.func.isRequired,
   onErroredState: PropTypes.func.isRequired,
-  authenticator: PropTypes.object.isRequired, // eslint-disable-line
+  authenticator: PropTypes.object.isRequired,
   index: PropTypes.number.isRequired,
 }

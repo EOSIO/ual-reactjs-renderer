@@ -13,22 +13,20 @@
   "license": "MIT",
   "scripts": {
     "build": "rm -rf build && webpack --config webpack.config.react.js",
-    "lint": "eslint ../src/**/*.js",
-    "example": "webpack-dev-server --config webpack.config.react.js"
+    "example": "webpack-dev-server --config webpack.config.react.js",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src"
   },
   "devDependencies": {
     "@babel/core": "^7.8.7",
     "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
-    "@blockone/eslint-config-blockone": "^0.0.5",
-    "@types/react": "15.0.4",
+    "@blockone/eslint-config-blockone": "^3.0.0",
+    "@types/react": "^15.0.4",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.4",
     "babel-polyfill": "^6.26.0",
     "dotenv": "^8.2.0",
-    "eslint": "^5.10.0",
-    "eslint-plugin-no-exclusive-tests": "^1.0.0-rc.1",
     "html-webpack-plugin": "^3.2.0",
     "typescript": "^3.8.3",
     "webpack": "^4.29.6",

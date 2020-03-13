@@ -25,6 +25,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALAuthButton
+   *
    * @memberof UALBoxParts
    * @method
    * @name authButton
@@ -46,6 +47,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALAuthInput
+   *
    * @memberof UALBoxParts
    * @method
    * @name accountLogin
@@ -63,6 +65,7 @@ export class UALBoxParts {
 
   /**
    * returns the secondary instructions for a given screen
+   *
    * @memberof UALBoxParts
    * @method
    * @name secondaryInstructions
@@ -96,6 +99,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALInstallAuth
+   *
    * @memberof UALBoxParts
    * @method
    * @name installAuthenticatorSection
@@ -107,6 +111,7 @@ export class UALBoxParts {
 
   /**
    * returns a back-button DOM element
+   *
    * @memberof UALBoxParts
    * @method
    * @name backButton
@@ -128,6 +133,7 @@ export class UALBoxParts {
 
   /**
    * returns instructions on dealing with no available authenticators
+   *
    * @memberof UALBoxParts
    * @method
    * @name noAvailableAuthenticators
@@ -145,6 +151,7 @@ export class UALBoxParts {
 
   /**
    * returns the main content of UALBox
+   *
    * @memberof UALBoxParts
    * @method
    * @name mainContent
@@ -182,6 +189,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALErrorMessage
+   *
    * @memberof UALBoxParts
    * @method
    * @name errorMessage
@@ -196,6 +204,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALLearnMore
+   *
    * @memberof UALBoxParts
    * @method
    * @name learnMore
@@ -210,6 +219,7 @@ export class UALBoxParts {
 
   /**
    * returns the background color for a given screen
+   *
    * @memberof UALBoxParts
    * @method
    * @name boxBackground
@@ -231,6 +241,7 @@ export class UALBoxParts {
 
   /**
    * returns the main title of a screen of UALBox
+   *
    * @memberof UALBoxParts
    * @method
    * @name boxTitle
@@ -245,6 +256,7 @@ export class UALBoxParts {
 
   /**
    * returns an instance of UALExitButton
+   *
    * @memberof UALBoxParts
    * @method
    * @name exitButton
