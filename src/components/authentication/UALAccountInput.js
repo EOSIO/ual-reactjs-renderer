@@ -140,7 +140,7 @@ export class UALAccountInput extends Component {
  * @prop {boolean} loading - loading state of authentication
  */
 UALAccountInput.propTypes = {
-  authenticator: PropTypes.object.isRequired, // eslint-disable-line
+  authenticator: PropTypes.object.isRequired,
   submitAccountForLogin: PropTypes.func.isRequired,
   loading: PropTypes.bool.isRequired,
 }

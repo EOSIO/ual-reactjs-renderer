@@ -1,3 +1,5 @@
+import { Authenticator } from 'universal-authenticator-library'
+
 const ScatterJS = {
   scatter: {
     connect: (appName) => {
@@ -36,9 +38,9 @@ class ScatterUser {
   }
 }
 
-export class Scatter {
+export class Scatter extends Authenticator {
   constructor(chains, options = { appName: '' }) {
-    this.chains = chains
+    super(chains)
     this.appName = options.appName
     this.scatterIsLoading = false
     this.initError = null
@@ -123,5 +125,9 @@ export class Scatter {
 
   async shouldRequestAccountName() {
     return true
+  }
+
+  getName() {
+    return 'authenticator'
   }
 }

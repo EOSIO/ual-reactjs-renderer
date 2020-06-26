@@ -75,5 +75,5 @@ export class UALInstallAuth extends Component {
  * @prop {Authenticator} authenticator - authenticator from which to render an install button
  */
 UALInstallAuth.propTypes = {
-  authenticator: PropTypes.object.isRequired, // eslint-disable-line
+  authenticator: PropTypes.object.isRequired,
 }

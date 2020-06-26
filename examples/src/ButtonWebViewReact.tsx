@@ -42,7 +42,7 @@ interface TransactionState {
   rpc: JsonRpc
 }
 
-declare var EXAMPLE_ENV: ExampleEnv
+declare const EXAMPLE_ENV: ExampleEnv
 
 const exampleNet = {
   chainId: EXAMPLE_ENV.CHAIN_ID,
@@ -109,7 +109,7 @@ class TransactionApp extends React.Component<TransactionProps, TransactionState>
     demoTransaction.actions[0].data.from = accountName
     try {
       await activeUser.signTransaction(demoTransaction, { broadcast: true })
-      this.updateAccountBalance()
+      await this.updateAccountBalance()
     } catch (error) {
       console.warn(error)
     }
