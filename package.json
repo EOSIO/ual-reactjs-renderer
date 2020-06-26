@@ -1,6 +1,6 @@
 {
   "name": "ual-reactjs-renderer",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "main": "dist/index.js",
   "author": {
     "name": "block.one",
@@ -27,7 +27,7 @@
     "react-icons": "3.9.0",
     "react-tooltip": "3.9.2",
     "styled-components": "4.4.1",
-    "universal-authenticator-library": "0.2.0"
+    "universal-authenticator-library": "0.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
