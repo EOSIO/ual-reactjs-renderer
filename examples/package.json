@@ -38,9 +38,9 @@
     "prop-types": "15.7.2",
     "react": "16.13.0",
     "react-dom": "16.13.0",
-    "ual-ledger": "0.2.0",
-    "ual-lynx": "0.3.0",
-    "ual-reactjs-renderer": "^0.2.0",
-    "ual-scatter": "0.2.0"
+    "ual-ledger": "0.3.0",
+    "ual-lynx": "0.4.0",
+    "ual-reactjs-renderer": "../",
+    "ual-scatter": "0.3.0"
   }
 }
