@@ -166,7 +166,7 @@ export class UALProvider extends Component {
           const users = await authenticator.login()
           const accountName = await users[0].getAccountName()
           if (!isAutoLogin) {
-            window.localStorage.setItem('UALLoggedInAuthType', authenticator.constructor.name)
+            window.localStorage.setItem('UALLoggedInAuthType', authenticator.getName())
             this.setUALInvalidateAt(authenticator)
           }
           broadcastStatus({
@@ -194,7 +194,6 @@ export class UALProvider extends Component {
        */
       submitAccountForLogin: async (accountInput, authenticator) => {
         const { broadcastStatus } = this.state
-        const authenticatorName = authenticator.constructor.name
         broadcastStatus({
           loading: true,
           message: authenticator.requiresGetKeyConfirmation()
@@ -203,7 +202,7 @@ export class UALProvider extends Component {
         })
         try {
           const users = await authenticator.login(accountInput)
-          window.localStorage.setItem('UALLoggedInAuthType', authenticatorName)
+          window.localStorage.setItem('UALLoggedInAuthType', authenticator.getName())
           window.localStorage.setItem('UALAccountName', accountInput)
           broadcastStatus({
             activeUser: users[users.length - 1],
@@ -276,7 +275,7 @@ export class UALProvider extends Component {
    * @return {number|boolean}
    */
   getAuthenticatorInstance = (type, availableAuthenticators) => {
-    const loggedIn = availableAuthenticators.filter(auth => auth.constructor.name === type)
+    const loggedIn = availableAuthenticators.filter(auth => auth.getName() === type)
     if (!loggedIn.length) {
       this.clearCache()
     }
