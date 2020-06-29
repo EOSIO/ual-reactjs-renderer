@@ -194,7 +194,6 @@ export class UALProvider extends Component {
        */
       submitAccountForLogin: async (accountInput, authenticator) => {
         const { broadcastStatus } = this.state
-        const authenticatorName = authenticator.getName()
         broadcastStatus({
           loading: true,
           message: authenticator.requiresGetKeyConfirmation()
@@ -203,7 +202,7 @@ export class UALProvider extends Component {
         })
         try {
           const users = await authenticator.login(accountInput)
-          window.localStorage.setItem('UALLoggedInAuthType', authenticatorName)
+          window.localStorage.setItem('UALLoggedInAuthType', authenticator.getName())
           window.localStorage.setItem('UALAccountName', accountInput)
           broadcastStatus({
             activeUser: users[users.length - 1],
