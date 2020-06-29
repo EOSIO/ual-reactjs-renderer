@@ -107,7 +107,7 @@ class UALBoxBase extends Component {
    * @param {Authenticator} authenticator
    */
   enterInstallScreen = (authenticator) => {
-    const authName = authenticator.getStyle().text
+    const authName = authenticator.getName()
     const secondaryInstructions = i18n.t('getStarted', { authName })
     const installState = {
       containerEnter: true,
