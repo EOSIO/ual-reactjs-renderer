@@ -128,6 +128,6 @@ export class Scatter extends Authenticator {
   }
 
   getName() {
-    return 'authenticator'
+    return 'scatter'
   }
 }
