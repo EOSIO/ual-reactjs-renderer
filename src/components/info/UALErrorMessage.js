@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { UALError } from 'universal-authenticator-library'
-
-import { IoMdInformationCircleOutline } from 'react-icons/io'
+import IoMdInformationCircleOutline from '@meronex/icons/ios/IosInformationCircleOutline'
 
 import { base } from '../../styles/base'
 import { errorMessage } from '../../styles/error'
