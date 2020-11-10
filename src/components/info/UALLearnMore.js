@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { IoMdInformationCircleOutline, IoMdCloseCircleOutline } from 'react-icons/io'
+import IoMdInformationCircleOutline from '@meronex/icons/ios/IosInformationCircleOutline'
+import IoMdCloseCircleOutline from '@meronex/icons/ios/IosCloseCircleOutline'
 import i18n from '../../i18n'
 
 import { base } from '../../styles/base'

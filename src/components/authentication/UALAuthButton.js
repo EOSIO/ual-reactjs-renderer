@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Tooltip from 'react-tooltip'
-import { FaChevronRight, FaDownload } from 'react-icons/fa'
-import { IoMdInformationCircleOutline } from 'react-icons/io'
+import FaChevronRight from '@meronex/icons/fa/FaChevronRight'
+import FaDownload from '@meronex/icons/fa/FaDownload'
+import IoMdInformationCircleOutline from '@meronex/icons/ios/IosInformationCircleOutline'
 
 import { UALLoadingIcon } from '../misc/UALLoadingIcon'
 import { boxTitles } from '../../constants/box'
