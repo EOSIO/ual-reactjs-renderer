@@ -19,6 +19,7 @@
     "docs": "jsdoc src -r -d docs"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "i18next": "14.0.1",
     "i18next-browser-languagedetector": "2.2.4",
     "prop-types": "15.7.2",
@@ -42,6 +43,7 @@
     "@types/jest": "^25.1.4",
     "@types/react": "15.0.4",
     "babel-jest": "^25.1.0",
+    "babel-plugin-react-icons": "^0.1.1",
     "babel-polyfill": "^6.26.0",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
