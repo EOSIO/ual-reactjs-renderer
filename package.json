@@ -1,7 +1,8 @@
 {
   "name": "ual-reactjs-renderer",
   "version": "0.3.1",
-  "main": "dist/index.js",
+  "main": "index.js",
+  "module": "dist/esm/index.js",
   "author": {
     "name": "block.one",
     "url": "https://block.one/"
@@ -12,7 +13,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && babel src --out-dir dist --source-maps",
+    "build": "rm -rf dist && npm run build:cjs && npm run build:esm",
+    "build:cjs": "babel src --out-dir dist/cjs --source-maps",
+    "build:esm": "babel src --out-dir dist/esm --source-maps --env-name esm",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src",
     "test": "jest",
     "prepare": "yarn build",
