@@ -22,12 +22,14 @@
     "i18next": "14.0.1",
     "i18next-browser-languagedetector": "2.2.4",
     "prop-types": "15.7.2",
-    "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "react-icons": "3.9.0",
-    "react-tooltip": "3.9.2",
+    "react-icons": "> 3.9.0",
+    "react-tooltip": "> 3.9.2",
     "styled-components": "4.4.1",
     "universal-authenticator-library": "0.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.13.0 || ^17.0.2",
+    "react-dom": "16.13.0 || ^17.0.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -41,15 +43,17 @@
     "@types/i18next-browser-languagedetector": "^2.0.1",
     "@types/jest": "^25.1.4",
     "@types/react": "15.0.4",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "babel-jest": "^25.1.0",
     "babel-polyfill": "^6.26.0",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "eslint": "^6.8.0",
     "jest": "^25.1.0",
     "jest-enzyme": "^7.1.2",
     "jsdoc": "^3.5.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "typescript": "^3.8.3"
   }
 }
